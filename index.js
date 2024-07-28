@@ -7,16 +7,12 @@ const diffExpectNode = document.querySelector('#diffExpect')
 
 inputNode.addEventListener('submit', onSubmit)
 
-function evalInput(rawInput) {
-  return eval('(' + rawInput + ')')
-}
-
 function getActualExpect() {
   let actual
   let expect
   try {
-    actual = evalInput(inputNode.elements.actual.value)
-    expect = evalInput(inputNode.elements.expect.value)
+    actual = JSON.parse(inputNode.elements.actual.value)
+    expect = JSON.parse(inputNode.elements.expect.value)
   } catch(error) {
     actual = inputNode.elements.actual.value
     expect = inputNode.elements.expect.value
