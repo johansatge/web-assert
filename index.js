@@ -7,7 +7,7 @@ const diffExpectNode = document.querySelector('#diffExpect')
 
 inputNode.addEventListener('submit', onSubmit)
 
-function getActualExpect() {
+function getActualExpectFromUi() {
   let actual
   let expect
   try {
@@ -35,7 +35,7 @@ function removeSvgWhitespaces(svg) {
 
 function onSubmit(evt) {
   evt.preventDefault()
-  const { actual, expect } = getActualExpect()
+  const { actual, expect } = getActualExpectFromUi()
 
   try {
     assert({
