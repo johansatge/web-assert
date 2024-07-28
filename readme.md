@@ -1,0 +1,1 @@
+🚀 Moved to [jsenv/core](https://github.com/jsenv/core/tree/main/docs/assert) ✨
